@@ -15,6 +15,9 @@
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
 
+.menu-btn .btn-line:hover {
+  background-color: #187ead; }
+
 .menu-btn.close {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg); }
@@ -30,12 +33,116 @@
   -webkit-transform: rotate(135deg) translate(-6px, 6px);
   transform: rotate(135deg) translate(-6px, 6px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0.9; }
+
+.menu.show {
+  visibility: visible; }
+
+.menu-branding, .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden; }
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: #2f0404;
+  list-style: none;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+.menu-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.menu-branding {
+  background: #470606;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+.menu-branding.show {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.menu-branding .portrait {
+  width: 250px;
+  height: 250px;
+  background: url("../dist/img/laptop-hacker-icon-simple-style-vector-26799557.jpg");
+  border-radius: 50%;
+  border: solid 3px #187ead; }
+
+.menu .nav-item {
+  -webkit-transform: translate3d(600px, 0, 0);
+  transform: translate3d(600px, 0, 0);
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+.menu .nav-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.menu .nav-item.current > a {
+  color: #187ead; }
+
+.menu .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+.menu .nav-link:hover {
+  color: #187ead;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+.nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
-  background: #470505;
+  background: #470606;
   color: white;
   height: 100%;
   margin: 0;
@@ -55,7 +162,7 @@ body#bg-img:after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(71, 5, 5, 0.7); }
+  background: rgba(71, 6, 6, 0.9); }
 
 h1,
 h2,
@@ -73,7 +180,7 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(81, 6, 6, 0.5); }
+  background: rgba(80, 7, 7, 0.5); }
 
 a {
   color: white;
