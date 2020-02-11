@@ -18,7 +18,7 @@
 }
 
 .menu-btn .btn-line:hover {
-  background-color: #187ead;
+  background-color: #2295e2;
 }
 
 .menu-btn.close {
@@ -75,7 +75,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #2f0404;
+  background: #2a0303;
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -89,7 +89,7 @@
 }
 
 .menu-branding {
-  background: #470606;
+  background: #420505;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
   -webkit-transition: all 0.7s ease-out;
@@ -106,7 +106,7 @@
   height: 250px;
   background: url("../dist/img/laptop-hacker-icon-simple-style-vector-26799557.jpg");
   border-radius: 50%;
-  border: solid 3px #187ead;
+  border: solid 3px #2295e2;
 }
 
 .menu .nav-item {
@@ -122,7 +122,7 @@
 }
 
 .menu .nav-item.current > a {
-  color: #187ead;
+  color: #2295e2;
 }
 
 .menu .nav-link {
@@ -131,12 +131,14 @@
   font-size: 30px;
   text-transform: uppercase;
   padding: 1.5rem 0;
+  color: white;
+  font-weight: 800;
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
 }
 
 .menu .nav-link:hover {
-  color: #187ead;
+  color: #2295e2;
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
 }
@@ -167,11 +169,11 @@
 }
 
 body {
-  background: #470606;
+  background: #420505;
   color: white;
   height: 100%;
   margin: 0;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
 }
 
@@ -189,7 +191,7 @@ body#bg-img:after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(71, 6, 6, 0.9);
+  background: rgba(66, 5, 5, 0.9);
 }
 
 h1,
@@ -210,7 +212,7 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(80, 7, 7, 0.5);
+  background: rgba(75, 6, 6, 0.5);
 }
 
 a {
@@ -225,24 +227,26 @@ header {
 }
 
 .text-secondary {
-  color: #187ead;
+  color: #2295e2;
 }
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 }
 
 main .icons {
   margin-top: 1rem;
+  color: white;
 }
 
 main .icons a {
   padding: 0.4rem;
+  color: white;
 }
 
 main .icons a:hover {
-  color: #187ead;
+  color: #2295e2;
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
 }
@@ -253,6 +257,64 @@ main#home {
 
 main#home h1 {
   margin-top: 20vh;
+}
+
+.about-info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+      grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #2295e2 3px solid;
+}
+
+.bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.job-1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: job1;
+}
+
+.job-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: job2;
+}
+
+.job-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: job3;
+}
+
+.job {
+  background: #5a0707;
+  padding: 0.5rem;
+  border-bottom: #2295e2 5px solid;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #130101;
+  color: white;
+  height: 60px;
 }
 
 @media screen and (max-width: 768px) {
@@ -292,6 +354,11 @@ main#home h1 {
     background: url();
     width: 150px;
     height: 250px;
+  }
+  .about-info {
+        grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
